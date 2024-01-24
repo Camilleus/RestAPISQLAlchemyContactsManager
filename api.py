@@ -15,6 +15,16 @@ class ContactCreateUpdate(BaseModel):
     birth_date: date
     additional_data: str = None
     
+
+class ContactResponse(BaseModel):
+    id: int
+    first_name: str
+    last_name: str
+    email: str
+    phone_number: str
+    birth_date: date
+    additional_data: str = None
+    
     
 # CRUD operations
 @app.post("/contacts/", response_model=Contact)
@@ -40,3 +50,5 @@ def get_all_contacts(
     else:
         contacts = db.query(Contact).all()
     return contacts
+
+
