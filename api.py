@@ -70,3 +70,13 @@ def update_contact(contact_id: int, contact: ContactCreateUpdate, db: Session = 
     db.commit()
     db.refresh(db_contact)
     return db_contact
+
+
+@app.delete("/contacts/{contact_id}", response_model=ContactResponse)
+def delete_contact(contact_id: int, db: Session = Depends(get_db)):
+    contact = db.query(Contact).filter(Contact.id == contact_id).first()
+    if contact is None:
+        raise HTTPException(status_code=404, detail="Contact not found")
+    db.delete(contact)
+    db.commit()
+    return contact
