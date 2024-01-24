@@ -58,3 +58,15 @@ def get_contact(contact_id: int, db: Session = Depends(get_db)):
     if contact is None:
         raise HTTPException(status_code=404, detail="Contact not found")
     return contact
+
+
+@app.put("/contacts/{contact_id}", response_model=ContactResponse)
+def update_contact(contact_id: int, contact: ContactCreateUpdate, db: Session = Depends(get_db)):
+    db_contact = db.query(Contact).filter(Contact.id == contact_id).first()
+    if db_contact is None:
+        raise HTTPException(status_code=404, detail="Contact not found")
+    for key, value in contact.dict().items():
+        setattr(db_contact, key, value)
+    db.commit()
+    db.refresh(db_contact)
+    return db_contact
