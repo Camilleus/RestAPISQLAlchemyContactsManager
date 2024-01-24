@@ -52,3 +52,9 @@ def get_all_contacts(
     return contacts
 
 
+@app.get("/contacts/{contact_id}", response_model=ContactResponse)
+def get_contact(contact_id: int, db: Session = Depends(get_db)):
+    contact = db.query(Contact).filter(Contact.id == contact_id).first()
+    if contact is None:
+        raise HTTPException(status_code=404, detail="Contact not found")
+    return contact
