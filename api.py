@@ -26,3 +26,17 @@ def create_contact(contact: ContactCreateUpdate, db: Session = Depends(get_db)):
     return db_contact
 
 
+@app.get("/contacts/", response_model=list[Contact])
+def get_all_contacts(
+    q: str = Query(None, alias="search", description="Search contacts by first name, last name, or email"),
+    db: Session = Depends(get_db)
+):
+    if q:
+        contacts = db.query(Contact).filter(
+            Contact.first_name.ilike(f"%{q}%")
+            | Contact.last_name.ilike(f"%{q}%")
+            | Contact.email.ilike(f"%{q}%")
+        ).all()
+    else:
+        contacts = db.query(Contact).all()
+    return contacts
