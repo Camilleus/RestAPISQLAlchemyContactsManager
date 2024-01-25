@@ -1,6 +1,6 @@
 # RestAPISQLalchemyContactsManager
 
-tutaj działa, jeszcze nad tym pracuję
+tutaj działa, w wolnym czasię uczę się MySQL i go dodam jak tylko będę wiedział na tiptop jak
 
 ## Instalacja
 
