@@ -15,11 +15,11 @@ tutaj działa, jeszcze nad tym pracuję
 
 Czekamy na Twoje pull requesty!```
 
-Powyższy kod markdown wykorzystuje blok kodu do przedstawienia struktury projektu w formie drzewa. Dodatkowo, dodano sekcję "Instalacja" i "Kontrybucje" jako przykłady, które można dostosować do swoich potrzeb.
-
 ## Struktura Projektu
 
-RestAPISQLalchemyContactsManager
-
-- .gitattributes
-- README.md
+RestAPISQLAlchemyContactsManager
+├─ .gitattributes
+├─ api.py
+├─ db.py
+├─ models.py
+└─ README.md
