@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query, Depends
 from sqlalchemy.orm import Session
-from datetime import date
+from datetime import date, timedelta
 from .models import Contact
 from .db import get_db
 from pydantic import BaseModel
@@ -80,3 +80,15 @@ def delete_contact(contact_id: int, db: Session = Depends(get_db)):
     db.delete(contact)
     db.commit()
     return contact
+
+
+@app.get("/contacts/birthdays/", response_model=list[ContactResponse])
+def get_birthdays_within_7_days(db: Session = Depends(get_db)):
+    today = date.today()
+    next_week = today + timedelta(days=7)
+
+    contacts = db.query(Contact).filter(
+        Contact.birth_date.between(today, next_week)
+    ).all()
+
+    return contacts
