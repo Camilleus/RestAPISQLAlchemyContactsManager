@@ -1,6 +1,6 @@
 # RestAPISQLalchemyContactsManager
 
-tutaj działa, w wolnym czasię uczę się MySQL i go dodam jak tylko będę wiedział na tiptop jak
+tutaj działa, w wolnym czasię uczę się MySQL i XAMPP'a i dodam db jak tylko będę wiedział na tiptop jak
 
 ## Instalacja
 
