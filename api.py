@@ -5,7 +5,9 @@ from .models import Contact
 from .db import get_db
 from pydantic import BaseModel
 
+
 app = FastAPI()
+
 
 class ContactCreateUpdate(BaseModel):
     first_name: str
