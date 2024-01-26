@@ -13,7 +13,7 @@ tutaj działa, w wolnym czasię uczę się MySQL (MySQL Workbench i XAMPP) i dod
 
 ## Kontrybucje
 
-Czekamy na Twoje pull requesty!```
+Czekamy na Twoje pull requesty!
 
 ## Struktura Projektu
 
