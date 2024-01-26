@@ -18,12 +18,10 @@ Czekamy na Twoje pull requesty!```
 ## Struktura Projektu
 
 ```
-
 RestAPISQLAlchemyContactsManager
 ├─ .gitattributes
 ├─ api.py
 ├─ db.py
 ├─ models.py
 └─ README.md
-
 ```
