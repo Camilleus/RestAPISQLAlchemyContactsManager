@@ -5,7 +5,7 @@ tutaj działa, w wolnym czasię uczę się MySQL (MySQL Workbench i XAMPP) i zmi
 ## Instalacja
 
 1. Sklonuj repozytorium: `git clone https://github.com/Camilleus/RestAPISQLalchemyContactsManager.git`
-2. Przejdź do folderu projektu: `cd DRestAPISQLalchemyContactsManager`
+2. Przejdź do folderu projektu: `cd RestAPISQLalchemyContactsManager`
 3. Zainstaluj zależności: `poetry install`
 4. Uruchom serwer: `poetry run python main.py`
 
