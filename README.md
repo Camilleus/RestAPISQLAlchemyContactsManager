@@ -11,7 +11,7 @@ tutaj działa, w wolnym czasię uczę się MySQL (MySQL Workbench i XAMPP) i zmi
 
 ## Requirements
 
-Wszystko w pliku requirements.txt który kiedyś powstanie
+Wszystko ( a przynajmniej większość) w pliku requirements.txt
 
 ## Przyszłe Rozszerzenia
 
