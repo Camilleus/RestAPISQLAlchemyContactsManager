@@ -23,11 +23,15 @@ Czekamy na Twoje pull requesty!
 
 ```
 RestAPISQLAlchemyContactsManager
-├─ .gitattributes
-├─ __init__.py
 ├─ api.py
+├─ contacts.db
+├─ data_for_db.sql
+├─ data_sender.py
 ├─ db.py
+├─ data_faker.py
 ├─ main.py
 ├─ models.py
-└─ README.md
+├─ README.md
+├─ requirements.txt
+└─ __init__.py
 ```
