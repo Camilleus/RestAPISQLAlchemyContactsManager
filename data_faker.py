@@ -1,8 +1,6 @@
 from faker import Faker
-from models import Contact
-from db import database, get_db
+from db import database
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
 
 
 fake = Faker()
