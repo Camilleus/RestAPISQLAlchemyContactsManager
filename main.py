@@ -1,8 +1,5 @@
-from fastapi import FastAPI, HTTPException, Query, Depends, BackgroundTasks
-from sqlalchemy.orm import Session
-from datetime import date, timedelta
-from models import Contact
-from db import init_db, get_db
+from fastapi import FastAPI
+from db import init_db
 
 
 app = FastAPI()
@@ -11,5 +8,6 @@ app = FastAPI()
 init_db()
 
 
-from api import *
+from api import ContactCreateUpdate, ContactResponse, Contact, create_contact, get_all_contacts, get_contact, update_contact, delete_contact, get_birthdays_within_7_days
+
 
